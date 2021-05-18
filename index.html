@@ -1,50 +1,19 @@
-<html>
-  
+<html>  
     <head>
-
-        <title>Oppgave</title>
-    
-  
-
+        <title>Oppgave</title>    
   
   <style>
-
-    .box {
-        padding-top: 0px;
-        width: 100px;
-        height: 100px;
-    }
-    .grid-container {
-    padding: 10px;
-     width: 100px;
-     height: 100px;
-     display:grid;
-     row-gap: 10px;
-     column-gap: 10px;
-     align-content: start;
-     grid-template-columns: auto auto auto;
-    }
-     
-    #div1, #div2, #div3 {
-  background: pink;
-  grid-row 1 / span 1;
-  }
-     #div4, #div5, #div6 {
-    background: blue;
-    grid-row 2 / span 1;
-      }
-
-      #div7, #div8, #div9 {
-          background: green;
-          grid-row 3 / span 1;
-      }
+    //INNHOLD I STYLE HER
   </style>
       
 </head>
-<body onload=addDivs()>
+  
+  
+  
+<body onload=addDivs()>   // Når siden laster inn <body> taggen så kjøres scriptet 'addDivs()'
 
   
-<div id=container class="grid-container">
+<div id=container class="grid-container">   // denne div-taggen har en id som kalles 'container'. Dette er for at scriptet skal finne denne div-tagen når det kjører
 
   </div>
 
@@ -53,18 +22,21 @@
 
   
       <script>
-        function addDivs() {
-        container = document.getElementById("container");
+        function addDivs() {                                  // Dette er navnet på scriptet. Det er dette navnet som onload referer til i <body>-taggen
+        container = document.getElementById("container");     // dette er en variabel ved navn container. Den kan hete hva som helst, men den peker til referanse-diven i <body>
           
-        n = 0;
-        size = 9;
-        while (n < size){
-            var div = document.createElement('div');
-            div.className = 'box';
-            div.id = 'div' + parseInt(n+1);
-            container.appendChild(div); 
-            n++;
-  }
+        n = 0;                                                // Variabel ved navn 'næ. Denne kan hete hva som helst, men kallte den n som forkortelese for 'nummer'. Settes til verdien 0 når scriptet kjøres
+        size = 9;                                             // Variabel ved navn 'size'. Setter denne til 9 fordi vi trenger 9 ruter. Kan settes til hvilken som helst verdi.
+          
+        while (n < size)                                      // "While loop" Dette er en bit med kode som kjører på nytt og på nytt frem til noe har skjedd. 
+        {                                                     // I dette tilfelle vil denne sammenligne verdien av 'n' og 'size' og så lenge 'n' har en lavere verdi en 'size' så fortsetter scriptet å kjøre
+                                                              
+            var div = document.createElement('div');          // Lager et nytt element av typen <div>
+            div.className = 'box';                            // Gir det nye elementet en class av typen 'box'. Denne vil få egenskapene fra <style>
+            div.id = 'div' + parseInt(n+1);                   // Denne setter ID på det nye elementet til teksten 'div' og legger til verdien av 'n'. Siden verdien 'n' starter på 0, så legges det til +1 (n = 0 gir id="div1")
+            container.appendChild(div);                       // Her legges den nye diven til slutten i elementet vi fikk ved (container = document.getElementById("container");)
+            n++;                                              // Til sist økes verdien av 'n' med 1. Om 'n' var 0, så er den nå '1'. Etter det gjentas alt som er inne i "While-loopen" og dette fortsetter helt til 'n' er 9
+        }
  
 }
     </script>
