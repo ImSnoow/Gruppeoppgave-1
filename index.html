@@ -4,34 +4,16 @@
 
         <title>Oppgave</title>
         <link rel="stylesheet" href="style.css">
+        <script src="script.js"></script>
       
-</head>
-<body onload=addDivs()>
-
+    </head>
   
-<div id=container class="grid-container">
-
-  </div>
-
-
-</body>
-
+    <body onload=addDivs()>
   
-      <script>
-        function addDivs() {
-        container = document.getElementById("container");
-          
-        n = 0;
-        size = 9;
-        while (n < size){
-            var div = document.createElement('div');
-            div.className = 'box';
-            div.id = 'div' + parseInt(n+1);
-            container.appendChild(div); 
-            n++;
-  }
- 
-}
-    </script>
+      <div id=container class="grid-container">
+      </div>
+
+    </body>
+
   
 </html>
