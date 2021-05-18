@@ -20,5 +20,6 @@ function addDivs() {
 
 function clickScript(id)
 {   
-    alert("Klikket i rute nr: " + id);
+    var id_number = id.match(/\d+/g); // tar inn id, og fjerner alt som ikke er tall
+    alert("Klikket i rute nr: " + id_number);
 }
