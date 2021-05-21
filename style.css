@@ -1,31 +1,77 @@
 .box {
-  padding-top: 0px;
-  width: 100px;
-  height: 100px;
+  padding-top: 0vh;
+  width: 25vh;
+  height: 25vh;
 }
 
+body {
+  display: flex;
+  justify-content: center;
+  background-color: azure;
+
+}
+
+
 .grid-container {
-padding: 10px;
-width: 100px;
-height: 100px;
-display:grid;
-row-gap: 10px;
-column-gap: 10px;
+margin: auto;
+padding-top: 1vh;
+display: grid;
+row-gap: 1vh;
+column-gap: 1vh;
 align-content: start;
 grid-template-columns: auto auto auto;
 }
 
-#div1, #div2, #div3 {
+
+#div1 {
 background: pink;
-grid-row 1 / span 1;
+grid-row: 1 / span 1;
 }
 
-#div4, #div5, #div6 {
-background: blue;
-grid-row 2 / span 1;
+#div2 {
+    background-color: deeppink;
+    grid-row: 1 / span 1;
 }
 
-#div7, #div8, #div9 {
-    background: green;
-    grid-row 3 / span 1;
+#div3 {
+  background-image: url("Harold.jpg");
+  background-size: cover;
+  background-position: right;
+  grid-row: 1 / span 1;
+}
+
+#div4 {
+background: rgb(54, 54, 241);
+grid-row: 2 / span 1;
+}
+
+#div5 {
+  background-color: rgb(164, 79, 243);
+  grid-row: 2 / span 1;
+}
+
+#div6 {
+  background: rgb(48, 207, 186);
+  grid-row: 2 / span 1;
+  }
+
+#div7 {
+    background-image: url("pogchamp.png");
+    background-size: cover;
+    background-position: center;
+    background-color: rgb(77, 179, 204);
+    grid-row: 3 / span 1;
+}
+
+#div8 {
+    background-image: url("kekw.png");
+    background-size: cover;
+    background-color: rgb(139, 10, 107);
+    grid-row: 3 / span 1;
+}
+
+#div9{
+    background-image: url("realpepe.png");
+    background-size: cover;
+    background-color: dodgerblue;
 }
